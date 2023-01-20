@@ -11,26 +11,23 @@ public class NumberGuessGameA // Name of the public class
         Scanner sc = new Scanner(System.in);
         System.out.println("Set the range for the game by inputting two different numbers.");
         int min = 0;
-        if (sc.hasNextInt()){
+        if (sc.hasNextInt()) {
             min = sc.nextInt();
         } else {
             sc.next(); // discard
-            System.out.println("Hey I'm sorry but you did not choose the minimum as an integer. I will set the minimum to zero for you");
-        } //If we set the number to something that is not an int -> Discard the character and set the initial value to zero
-        
-        if (sc.hasNextInt()){
-            
+            System.out.println(
+                    "Hey I'm sorry but you did not choose the minimum as an integer. I will set the minimum to zero for you");
+        } // If we set the number to something that is not an int -> Discard the character
+          // and set the initial value to zero
+
+        if (sc.hasNextInt()) {
+
         }
         int max = sc.nextInt();
         int numTries = 0;
         // Setting the number of tries to zero
         // Using sc.nextInt and scanner for the error checking portion described below
 
-
-            
-
-
-     
         ArrayList<Integer> names = new ArrayList<Integer>();
         // Making it an empty array so that it does not output the same answer more than
         // once
@@ -39,7 +36,8 @@ public class NumberGuessGameA // Name of the public class
         final Random rand = new Random();
 
         final int randNumber = rand.nextInt(min, max + 1);
-        System.out.println("I am thinking of a number from " + min + " to " + max + ". Can you guess it?"); // Main question
+        System.out.println("I am thinking of a number from " + min + " to " + max + ". Can you guess it?"); // Main
+                                                                                                            // question
 
         // Main while loop
         while (guess != randNumber) {
@@ -97,3 +95,4 @@ public class NumberGuessGameA // Name of the public class
         return input;
     }
 }
+
